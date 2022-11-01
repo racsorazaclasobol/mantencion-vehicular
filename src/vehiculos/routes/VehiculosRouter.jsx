@@ -1,15 +1,11 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 
-import { NavBar } from "../../ui/components/NavBar"
-
 import { AddVehiculoPage, DetailVehiculo, MisVehiculosPage, VehiculoPage } from "../pages"
 
 export const VehiculosRouter = () => {
   return (
 
     <>
-      <NavBar />
-
       <div className="container">
         <Routes>
           <Route path="misVehiculos" element={ <MisVehiculosPage /> } />
