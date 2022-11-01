@@ -1,12 +1,12 @@
-import { AuthProvider } from "./auth"
 import { AppRouter } from "./router/AppRouter"
+import { AppTheme } from "./theme/AppTheme"
 
 export const MantencionApp = () => {
   return (
     <>
-    <AuthProvider>
+    <AppTheme>
       <AppRouter />
-    </AuthProvider>
+    </AppTheme>
     </>
   )
 }
