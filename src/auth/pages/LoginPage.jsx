@@ -11,12 +11,17 @@ import { startGoogleSignIn, startLoginWithEmailPassword } from "../../store/auth
 
 const initialForm = { email: 'oscar@gmail.com', password: '123456' };
 
+const formValidation = {
+  email:        [ (value) => value.includes('@'), 'El correo debe tener una @'],
+  password:     [ (value) => value.length >= 6 , 'El debe tener mas de 6 caracteres'],
+}
+
 export const LoginPage = () => {
 
   const dispatch    = useDispatch();
   const { status, errorMessage }  = useSelector( state => state.auth );
 
-  const { formState, email, password, onInputChange } = useForm( initialForm );
+  const { formState, email, password, onInputChange, isFormValid, emailValid, passwordValid } = useForm( initialForm, formValidation );
 
   const isAuthenticated = useMemo( () => status === 'checking', [status]);
 
