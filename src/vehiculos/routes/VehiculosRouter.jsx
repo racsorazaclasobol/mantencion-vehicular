@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom"
 import { AddVehiculoPage, DetailVehiculo, MisVehiculosPage, VehiculoPage } from "../pages"
 
 export const VehiculosRouter = () => {
+
   return (
 
     <>
@@ -14,7 +15,7 @@ export const VehiculosRouter = () => {
           <Route path="addVehicle" element={ <AddVehiculoPage  /> } />
 
 
-          <Route path="/" element={ <Navigate to="/misVehiculos" />} />
+          <Route path="/*" element={ <Navigate to="/misVehiculos" />} />
         </Routes>
       </div>
     </>

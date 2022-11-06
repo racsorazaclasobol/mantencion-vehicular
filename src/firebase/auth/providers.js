@@ -74,6 +74,10 @@ import { FirebaseAuth } from './../config'
             errorMessage: error.message
         }
     }
-
-
  }
+
+//  export const logoutFirebase = async () => { 
+
+
+//   }
+

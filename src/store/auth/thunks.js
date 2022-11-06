@@ -47,5 +47,15 @@ export const startLoginWithEmailPassword = ({ email, password }) => {
         dispatch( login({ uid, email, displayName, photoURL }) );
 
     }
+}
+
+export const startLogoutFirebase = () => {
+
+    return async ( dispatch ) => {
+        
+        //llamar al microondas de alla
+        
+        
+    }
 
 }
